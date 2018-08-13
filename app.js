@@ -19,7 +19,8 @@ app.get('/apply', function(req,res){
     res.render('intern/ApplyForm.ejs')
 });
 app.post('/apply', function(req, res){
-    Intern.create(applicant, function(err, applied){
+    console.log(req.body);
+    Intern.create(req.body, function(err, applied){
         if(err) {
             console.log(err);
         } else {
