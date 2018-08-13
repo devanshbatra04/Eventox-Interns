@@ -29,6 +29,10 @@ app.post('/apply', function(req, res){
     });
 });
 
+app.get("/applied", function(req,res){
+    res.render("intern/applied.ejs")
+})
+
 app.listen(5002, function(req,res){
     console.log("listening on port " + 5002);
 });

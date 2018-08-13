@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventox Web App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/intern.css">
+</head>
+<body>
+<head>
+    <% var time = 10; %>
+    <meta http-equiv="refresh" content="<%= time %>;url=/">
+</head>
+<div class="success-msg">
+    <h1>Your application sucessfully submitted...<br>We will contact you soon...</h1>
+    <br><br>
+    <p>Redirecting you to intern page in <span id="count"><%= time %></span> seconds...</p>
+</div>
+<script>
+    window.onload = function(){
+        var count = document.getElementById("count").textContent - 1;
+        var setcount = setInterval(function(){
+            document.getElementById("count").textContent = count;
+            count--;
+            console.log(count);
+            if(count < 0){
+                clearInterval(setcount);
+            }
+        }, 1000);
+    }
+</script>
+</body>
+</html>
