@@ -4,7 +4,7 @@ const express                = require('express'),
     mongoose                 = require('mongoose');
 
 mongoose.connect("mongodb://dev:dev@ds237620.mlab.com:37620/evenox");
-
+var Intern = require('./models/intern');
 
 var app = express();
 
@@ -19,7 +19,13 @@ app.get('/apply', function(req,res){
     res.render('intern/ApplyForm.ejs')
 });
 app.post('/apply', function(req, res){
-    console.log(req.body);
+    Intern.create(applicant, function(err, applied){
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/applied");
+        }
+    });
 });
 
 app.listen(5002, function(req,res){
