@@ -1,6 +1,10 @@
 const express                = require('express'),
     bodyParser               = require('body-parser'),
-    ejs                      = require('ejs');
+    ejs                      = require('ejs'),
+    mongoose                 = require('mongoose');
+
+mongoose.connect("mongodb://dev:dev@ds237620.mlab.com:37620/evenox");
+
 
 var app = express();
 
@@ -13,7 +17,10 @@ app.get('/', function(req, res){
 });
 app.get('/apply', function(req,res){
     res.render('intern/ApplyForm.ejs')
-})
+});
+app.post('/apply', function(req, res){
+    console.log(req.body);
+});
 
 app.listen(5002, function(req,res){
     console.log("listening on port " + 5002);
