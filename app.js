@@ -3,7 +3,7 @@ const express                = require('express'),
     ejs                      = require('ejs'),
     mongoose                 = require('mongoose');
 
-mongoose.connect("mongodb://dev:dev@ds237620.mlab.com:37620/evenox");
+mongoose.connect("mongodb://admin:admin123@ds141221.mlab.com:41221/eventox");
 var Intern = require('./models/intern');
 
 var app = express();
@@ -33,6 +33,6 @@ app.get("/applied", function(req,res){
     res.render("intern/applied.ejs")
 })
 
-app.listen(5002, function(req,res){
+app.listen(process.env.PORT || 5002, function(req,res){
     console.log("listening on port " + 5002);
 });
