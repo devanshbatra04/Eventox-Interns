@@ -1,5 +1,5 @@
 
-module.exports = function(name, email,req, res) {
+module.exports = function(name, email,req, res, applied) {
 
     var nodemailer               = require('nodemailer');
     console.log(name, email);
@@ -20,9 +20,9 @@ module.exports = function(name, email,req, res) {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Aavesh Dagar" <no-reply@eventox.in>', // sender address
+        from: '"Eventox India" <no-reply@eventox.in>', // sender address
         to: email, // list of receivers
-        subject: 'Eventox - Intern Application Received', // Subject line
+        subject: 'Internship Application Received', // Subject line
         text: 'We have received your application as an Intern and will contact you shortly if selected.\n' +
         'Sit tight and wait  because, Organizing and participating in events will be better than ever.', // plain text body
         html: '<!DOCTYPE html>\n' +
@@ -195,6 +195,7 @@ module.exports = function(name, email,req, res) {
         '\n' +
         '                                                 Eventox is under construction and will be released as soon as possible. We have received your application for internship and will contact you shortly. It\'s great to see enthusiastic freshers like you. If our team finds you to be a' +
         'valuable addition, you will shortly be contacted.\n' +
+        '                                               \nYour responses were recored as : <b>Name </b>' + applied.name + ',<b> Email </b>' + applied.email  + '<b> Phone </b>' + applied.mob + ' <b>interests</b> ' + applied.interest + '\n' +
         '<p><b>Welcome to the Event revolution</b></p>\n' +
         '\n' +
         '\n' +
