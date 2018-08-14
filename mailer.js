@@ -22,8 +22,8 @@ module.exports = function(name, email,req, res) {
     let mailOptions = {
         from: '"Aavesh Dagar" <no-reply@eventox.in>', // sender address
         to: email, // list of receivers
-        subject: 'Welcome to Eventox', // Subject line
-        text: 'Eventox is under construction and will be released as soon as possible. You will be the first to know. Eventox is going to be awesome and it will change your event experience , it will make every event experience more exciting.It doesn\'t matter whether you are an Event Organizer , Participant , Sponsor , Event Management Company or a Freelancer. We have something for each one of you.\n' +
+        subject: 'Intern Application Received', // Subject line
+        text: 'We have received your application as an Intern and will contact you shortly if selected.\n' +
         'Sit tight and wait  because, Organizing and participating in events will be better than ever.', // plain text body
         html: '<!DOCTYPE html>\n' +
         '<html>\n' +
@@ -135,7 +135,7 @@ module.exports = function(name, email,req, res) {
         '\n' +
         '<!-- HIDDEN PREHEADER TEXT -->\n' +
         '<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">\n' +
-        '    Thank you for subscribing. We are pleased to have you onboard...\n' +
+        '    Thank you for registering as an intern. We are pleased to have you apply...\n' +
         '</div>\n' +
         '\n' +
         '<!-- HEADER -->\n' +
@@ -187,14 +187,14 @@ module.exports = function(name, email,req, res) {
         '                                    <!-- COPY -->\n' +
         '                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">\n' +
         '                                        <tr>\n' +
-        '                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">Welcome Onboard!!</td>\n' +
+        '                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">Thank You For Applying As An Intern!!</td>\n' +
         '                                        </tr>\n' +
         '                                        <tr>\n' +
         '                                            <td align="center" style="padding: 20px 0 0 0; font-size: 20px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding">\n' +
         '                                                \n' +
         '\n' +
-        '                                                 Eventox is under construction and will be released as soon as possible. You will be the first to know. Eventox is going to be awesome and it will change your event experience , it will make every event experience more exciting.It doesn\'t matter whether you are an Event Organizer , Participant , Sponsor , Event Management Company or a Freelancer. We have something for each one of you.\n' +
-        'Sit tight and wait  because, Organizing and participating in events will be better than ever.\n' +
+        '                                                 Eventox is under construction and will be released as soon as possible. We have received your application for internship and will contact you shortly. It\'s great to see enthusiastic freshers like you. If our team finds you to be an' +
+        'valuable addition, you will shortly be contacted.\n' +
         '<p><b>Welcome to the Event revolution</b></p>\n' +
         '\n' +
         '\n' +
