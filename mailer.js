@@ -346,7 +346,6 @@ module.exports = function(name, email,req, res) {
 
 
 
-        res.send(200);
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });

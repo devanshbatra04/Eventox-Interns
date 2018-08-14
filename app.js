@@ -1,7 +1,9 @@
 const express                = require('express'),
     bodyParser               = require('body-parser'),
     ejs                      = require('ejs'),
-    mongoose                 = require('mongoose');
+    mongoose                 = require('mongoose'),
+    mail                     = require('./mailer');
+;
 
 mongoose.connect("mongodb://admin:admin123@ds141221.mlab.com:41221/eventox");
 var Intern = require('./models/intern');
@@ -24,7 +26,7 @@ app.post('/apply', function(req, res){
         if(err) {
             console.log(err);
         } else {
-
+            mailer(name, email, req, res);
             res.redirect("/applied");
         }
     });
