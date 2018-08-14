@@ -3,7 +3,7 @@ const express                = require('express'),
     ejs                      = require('ejs'),
     mongoose                 = require('mongoose'),
     mail                     = require('./mailer');
-;
+
 
 mongoose.connect("mongodb://admin:admin123@ds141221.mlab.com:41221/eventox");
 var Intern = require('./models/intern');
