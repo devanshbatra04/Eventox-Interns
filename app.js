@@ -24,6 +24,7 @@ app.post('/apply', function(req, res){
         if(err) {
             console.log(err);
         } else {
+
             res.redirect("/applied");
         }
     });
