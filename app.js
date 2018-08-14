@@ -26,7 +26,7 @@ app.post('/apply', function(req, res){
         if(err) {
             console.log(err);
         } else {
-            mailer(name, email, req, res);
+            mail(applied.name, applied.email, req, res);
             res.redirect("/applied");
         }
     });
