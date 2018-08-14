@@ -22,7 +22,7 @@ module.exports = function(name, email,req, res) {
     let mailOptions = {
         from: '"Aavesh Dagar" <no-reply@eventox.in>', // sender address
         to: email, // list of receivers
-        subject: 'Intern Application Received', // Subject line
+        subject: 'Eventox - Intern Application Received', // Subject line
         text: 'We have received your application as an Intern and will contact you shortly if selected.\n' +
         'Sit tight and wait  because, Organizing and participating in events will be better than ever.', // plain text body
         html: '<!DOCTYPE html>\n' +
@@ -193,7 +193,7 @@ module.exports = function(name, email,req, res) {
         '                                            <td align="center" style="padding: 20px 0 0 0; font-size: 20px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding">\n' +
         '                                                \n' +
         '\n' +
-        '                                                 Eventox is under construction and will be released as soon as possible. We have received your application for internship and will contact you shortly. It\'s great to see enthusiastic freshers like you. If our team finds you to be an' +
+        '                                                 Eventox is under construction and will be released as soon as possible. We have received your application for internship and will contact you shortly. It\'s great to see enthusiastic freshers like you. If our team finds you to be a' +
         'valuable addition, you will shortly be contacted.\n' +
         '<p><b>Welcome to the Event revolution</b></p>\n' +
         '\n' +
