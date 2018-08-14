@@ -195,7 +195,7 @@ module.exports = function(name, email,req, res, applied) {
         '\n' +
         '                                                 Eventox is under construction and will be released as soon as possible. We have received your application for internship and will contact you shortly. It\'s great to see enthusiastic freshers like you. If our team finds you to be a' +
         'valuable addition, you will shortly be contacted.\n' +
-        '                                               \nYour responses were recored as : <b>Name </b>' + applied.name + ',<b> Email </b>' + applied.email  + '<b> Phone </b>' + applied.mob + ' <b>interests</b> ' + applied.interest + '\n' +
+        '<p>                                               \nYour responses were recored as : <b>Name </b>' + applied.name + ',<b> Email </b>' + applied.email  + ',<b> Phone </b>' + applied.mob + ', <b>Interests</b> ' + applied.interest + '\n </p>' +
         '<p><b>Welcome to the Event revolution</b></p>\n' +
         '\n' +
         '\n' +
